@@ -19,7 +19,6 @@ public class CreateStreams {
 
         // create stream using generate method
         Stream<Integer> generateStream = Stream.generate(() -> 5);
-
         // create stream using iterate method
         Stream<Integer> iterateStream = Stream.iterate(1, x -> x + 2);
 

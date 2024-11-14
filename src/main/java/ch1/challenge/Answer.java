@@ -15,16 +15,29 @@ class Answer {
     public static List<Order> filterOrders(List<Order> orders, LocalDate filterDate) {
 
         ArrayList<Order> filteredOrders = OrderUtil.getOrdersAfterDate(orders, filterDate);
+        if (showExpectedResult) {
+            System.out.println("Expected Result: " + filteredOrders);
+        }
+        if (showHints) {
+            System.out.println("Hint: Use the method 'OrderUtil.getOrdersAfterDate'");
+        }
         System.out.println("Filtered Orders: " + filteredOrders);
         return filteredOrders;
     }
 }
 
 class OrderUtil {
-    // Method to filter orders after a given date
+    /**
+     * Method to filter orders after a given date
+     */
     public static ArrayList<Order> getOrdersAfterDate(List<Order> orders, LocalDate afterDate) {
-        // Your code goes here
-        return null;
+        ArrayList<Order> ordersAfterDate = new ArrayList<>();
+        for (Order order : orders) {
+            if (order.getDate().isAfter(afterDate)) {
+                ordersAfterDate.add(order);
+            }
+        }
+        return ordersAfterDate;
     }
 }
 

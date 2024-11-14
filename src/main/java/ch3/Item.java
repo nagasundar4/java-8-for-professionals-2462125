@@ -25,7 +25,7 @@ public class Item implements Foldable, Washable {
     }
 
     public static void main(String[] args) {
-        //Foldable.printFoldInstructions();
+        Foldable.printFoldInstructions();
         Item item = new Item("Jeans");
         item.fold();
     }

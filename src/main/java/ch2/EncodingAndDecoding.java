@@ -6,6 +6,8 @@ public class EncodingAndDecoding {
     public static void main(String[] args) {
         String encoded = Base64.getEncoder().encodeToString("Bye".getBytes());
         System.out.println(encoded);
+        String decodedBye = new String(Base64.getDecoder().decode(encoded));
+        System.out.println(decodedBye);
 
         String encodedHiThere = "SGkgdGhlcmU=";
         String decodedHiThere = new String(Base64.getDecoder().decode(encodedHiThere));
