@@ -83,4 +83,19 @@ class Order {
     public int hashCode() {
         return Objects.hash(name, date);
     }
+
+    public static void main(String[] args) {
+        List<Order> orders = new ArrayList<>();
+        orders.add(new Order("Order 1", LocalDate.of(2020, 1, 1)));
+        orders.add(new Order("Order 2", LocalDate.of(2020, 1, 2)));
+        orders.add(new Order("Order 3", LocalDate.of(2020, 1, 3)));
+        orders.add(new Order("Order 4", LocalDate.of(2020, 1, 4)));
+        orders.add(new Order("Order 5", LocalDate.of(2020, 1, 5)));
+        orders.add(new Order("Order 6", LocalDate.of(2020, 1, 6)));
+        orders.add(new Order("Order 7", LocalDate.of(2020, 1, 7)));
+        orders.add(new Order("Order 8", LocalDate.of(2020, 1, 8)));
+        orders.add(new Order("Order 9", LocalDate.of(2020, 1, 9)));
+        orders.add(new Order("Order 10", LocalDate.of(2020, 1, 10)));
+        orders.add(new Order("Order 11", LocalDate.of(2020, 1, 11)));
+    }
 }
